@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Business.Concrete;
+using DataAccsess.Concrete.EntitityFramework;
+using System;
 
 namespace ConsoleUI
 {
@@ -10,6 +8,11 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            EmployerManager employerManager = new EmployerManager(new EfEmployerDal());
+            foreach (var employer in employerManager.GetAllByUserId(1))
+            {
+                Console.WriteLine(employer.CompanyName);
+            }
         }
     }
 }

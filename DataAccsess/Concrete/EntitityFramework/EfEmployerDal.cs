@@ -34,12 +34,19 @@ namespace DataAccsess.Concrete.EntitityFramework
 
         public Employer Get(Expression<Func<Employer, bool>> filter)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context= new HrmsContext())
+            {
+                return context.Set<Employer>().SingleOrDefault(filter);
+            }
         }
 
         public List<Employer> GetAll(Expression<Func<Employer, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context=new HrmsContext())
+            {
+                return filter == null ? context.Set<Employer>().ToList() :
+                    context.Set<Employer>().Where(filter).ToList();
+            }
         }
 
         public void Update(Employer entity)
