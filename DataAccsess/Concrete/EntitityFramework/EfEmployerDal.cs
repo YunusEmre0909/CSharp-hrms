@@ -1,5 +1,6 @@
 ﻿using DataAccsess.Abstract;
 using Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,22 @@ namespace DataAccsess.Concrete.EntitityFramework
     {
         public void Add(Employer entity)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context=new HrmsContext())
+            {
+                var addedEntity = context.Entry(entity);
+                addedEntity.State = EntityState.Added;
+                context.SaveChanges();
+            }
         }
 
         public void Delete(Employer entity)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context = new HrmsContext())
+            {
+                var deletedEntity = context.Entry(entity);
+                deletedEntity.State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
 
         public Employer Get(Expression<Func<Employer, bool>> filter)
@@ -33,7 +44,12 @@ namespace DataAccsess.Concrete.EntitityFramework
 
         public void Update(Employer entity)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context = new HrmsContext())
+            {
+                var updatedEntity = context.Entry(entity);
+                updatedEntity.State = EntityState.Modified;
+                context.SaveChanges();
+            }
         }
     }
 }
