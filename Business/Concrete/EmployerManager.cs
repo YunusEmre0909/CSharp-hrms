@@ -19,12 +19,12 @@ namespace Business.Concrete
         }
         public void Add(Employer employer)
         {
-            throw new NotImplementedException();
+            _employerDal.Add(employer);
         }
 
         public void Delete(Employer employer)
         {
-            throw new NotImplementedException();
+            _employerDal.Delete(employer);
         }
 
         public List<Employer> GetAll()
@@ -39,7 +39,7 @@ namespace Business.Concrete
 
         public void Update(Employer employer)
         {
-            throw new NotImplementedException();
+            _employerDal.Update(employer);
         }
     }
 }

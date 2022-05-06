@@ -28,7 +28,11 @@ namespace DataAccsess.Concrete.EntitityFramework
 
         public List<JobPosition> GetAll(Expression<Func<JobPosition, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            using (HrmsContext context = new HrmsContext())
+            {
+                return filter == null ? context.Set<JobPosition>().ToList() :
+                    context.Set<JobPosition>().Where(filter).ToList();
+            }
         }
 
         public void Update(JobPosition entity)
