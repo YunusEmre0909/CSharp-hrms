@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{C6844C03-AF94-49B5-B8E2-545F1E89869E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccsess", "DataAccsess\DataAccsess.csproj", "{D64B96CE-705E-476C-87BC-D114AC5C8CAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccsess\DataAccess.csproj", "{D64B96CE-705E-476C-87BC-D114AC5C8CAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{10E1B17E-6D13-4D10-8E84-9E945E5950A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{CC261F00-4C50-4925-BD1D-CEA1C9CB9184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{05411B33-3A29-44FD-9FDE-A4D0479D6A47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CC261F00-4C50-4925-BD1D-CEA1C9CB9184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC261F00-4C50-4925-BD1D-CEA1C9CB9184}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC261F00-4C50-4925-BD1D-CEA1C9CB9184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05411B33-3A29-44FD-9FDE-A4D0479D6A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05411B33-3A29-44FD-9FDE-A4D0479D6A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05411B33-3A29-44FD-9FDE-A4D0479D6A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05411B33-3A29-44FD-9FDE-A4D0479D6A47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿using DataAccsess.Abstract;
+﻿using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntitityFramework
 {
     public class EfSystemStaffDal : ISystemStaffDal
     {

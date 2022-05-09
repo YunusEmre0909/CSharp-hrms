@@ -1,4 +1,4 @@
-﻿using DataAccsess.Abstract;
+﻿using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,31 +7,31 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntitityFramework
 {
-    public class EfUserDal : IUserDal
+    public class EfJobSeekerDal : IJobSeekerDal
     {
-        public void Add(User entity)
+        public void Add(JobSeeker entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(User entity)
+        public void Delete(JobSeeker entity)
         {
             throw new NotImplementedException();
         }
 
-        public User Get(Expression<Func<User, bool>> filter)
+        public JobSeeker Get(Expression<Func<JobSeeker, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll(Expression<Func<User, bool>> filter = null)
+        public List<JobSeeker> GetAll(Expression<Func<JobSeeker, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(User entity)
+        public void Update(JobSeeker entity)
         {
             throw new NotImplementedException();
         }

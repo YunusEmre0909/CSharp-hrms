@@ -1,4 +1,4 @@
-﻿using DataAccsess.Abstract;
+﻿using DataAccess.Abstract;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntitityFramework
 {
     public class EfEmployerDal : IEmployerDal
     {

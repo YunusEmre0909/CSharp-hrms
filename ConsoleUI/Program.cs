@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using DataAccsess.Concrete.EntitityFramework;
+using DataAccess.Concrete.EntitityFramework;
 using Entities.Concrete;
 using System;
 
@@ -11,22 +11,22 @@ namespace ConsoleUI
         {
             //EmployerTest();
 
-            JobPositionManager jobPositionManager = new JobPositionManager(new EfJobPositinDal());
+            //JobPositionManager jobPositionManager = new JobPositionManager(new EfJobPositinDal());
 
-            foreach (var jobs in jobPositionManager.GetAll())
-            {
-                Console.WriteLine(jobs.JobName);
-            }
+            //foreach (var jobs in jobPositionManager.GetAll())
+            //{
+            //    Console.WriteLine(jobs.JobName);
+            //}
         }
 
-        private static void EmployerTest()
-        {
-            EmployerManager employerManager = new EmployerManager(new EfEmployerDal());
-            employerManager.Add(new Employer { UserId = 2, CompanyName = "software team", Password = "54656", PhoneNumber = "654556454654", WebSite = "kjdskljflksjdlf" });
-            foreach (var employer in employerManager.GetAll())
-            {
-                Console.WriteLine(employer.CompanyName);
-            }
-        }
+        //private static void EmployerTest()
+        //{
+        //    EmployerManager employerManager = new EmployerManager(new EfEmployerDal());
+        //    employerManager.Add(new Employer { UserId = 2, CompanyName = "software team", Password = "54656", PhoneNumber = "654556454654", WebSite = "kjdskljflksjdlf" });
+        //    foreach (var employer in employerManager.GetAll())
+        //    {
+        //        Console.WriteLine(employer.CompanyName);
+        //    }
+        //}
     }
 }

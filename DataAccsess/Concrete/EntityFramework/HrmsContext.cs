@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntitityFramework
 {
     public class HrmsContext :DbContext
     {
