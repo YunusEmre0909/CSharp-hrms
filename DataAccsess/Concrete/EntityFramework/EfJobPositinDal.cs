@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,35 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntitityFramework
 {
-    public class EfJobPositinDal : IJobPositionDal
+    public class EfJobPositinDal : EfEntityRepositoryBase<JobPosition,HrmsContext> ,IJobPositionDal
     {
-        public void Add(JobPosition entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(JobPosition entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public JobPosition Get(Expression<Func<JobPosition, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<JobPosition> GetAll(Expression<Func<JobPosition, bool>> filter = null)
-        {
-            using (HrmsContext context = new HrmsContext())
-            {
-                return filter == null ? context.Set<JobPosition>().ToList() :
-                    context.Set<JobPosition>().Where(filter).ToList();
-            }
-        }
-
-        public void Update(JobPosition entity)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntitityFramework
 {
-    public class EfSystemStaffDal : ISystemStaffDal
+    public class EfSystemStaffDal :EfEntityRepositoryBase<SystemStaff,HrmsContext> ,ISystemStaffDal
     {
-        public void Add(SystemStaff entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(SystemStaff entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public SystemStaff Get(Expression<Func<SystemStaff, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<SystemStaff> GetAll(Expression<Func<SystemStaff, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(SystemStaff entity)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

@@ -11,12 +11,12 @@ namespace ConsoleUI
         {
             //EmployerTest();
 
-            //JobPositionManager jobPositionManager = new JobPositionManager(new EfJobPositinDal());
+            JobPositionManager jobPositionManager = new JobPositionManager(new EfJobPositinDal());
 
-            //foreach (var jobs in jobPositionManager.GetAll())
-            //{
-            //    Console.WriteLine(jobs.JobName);
-            //}
+            foreach (var jobs in jobPositionManager.GetAll())
+            {
+                Console.WriteLine(jobs.JobName);
+            }
         }
 
         //private static void EmployerTest()
