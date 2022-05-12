@@ -1,5 +1,5 @@
 ﻿using Business.Concrete;
-using DataAccess.Concrete.EntitityFramework;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
 
@@ -11,6 +11,19 @@ namespace ConsoleUI
         {
             //EmployerTest();
 
+            //JobPositionTest();
+
+            CityManager cityManager = new CityManager(new EfCityDal());
+
+            cityManager.Add(new City {  CityName = "Adana" });
+            foreach (var city in cityManager.GetAll())
+            {
+                Console.WriteLine(city.CityName);
+            }
+        }
+
+        private static void JobPositionTest()
+        {
             JobPositionManager jobPositionManager = new JobPositionManager(new EfJobPositinDal());
 
             foreach (var jobs in jobPositionManager.GetAll())
@@ -19,14 +32,14 @@ namespace ConsoleUI
             }
         }
 
-        //private static void EmployerTest()
-        //{
-        //    EmployerManager employerManager = new EmployerManager(new EfEmployerDal());
-        //    employerManager.Add(new Employer { UserId = 2, CompanyName = "software team", Password = "54656", PhoneNumber = "654556454654", WebSite = "kjdskljflksjdlf" });
-        //    foreach (var employer in employerManager.GetAll())
-        //    {
-        //        Console.WriteLine(employer.CompanyName);
-        //    }
-        //}
+        private static void EmployerTest()
+        {
+           EmployerManager employerManager = new EmployerManager(new EfEmployerDal());
+            employerManager.Add(new Employer { UserId = 2, CompanyName = "software team", Password = "54656", PhoneNumber = "654556454654", WebSite = "kjdskljflksjdlf" });
+           foreach (var employer in employerManager.GetAll())
+           {
+                Console.WriteLine(employer.CompanyName);
+            }
+        }
     }
 }

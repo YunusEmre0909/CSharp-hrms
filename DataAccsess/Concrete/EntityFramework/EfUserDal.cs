@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     public class EfUserDal :EfEntityRepositoryBase<User,HrmsContext> ,IUserDal
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete.EntitityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     public class HrmsContext :DbContext
     {
@@ -20,5 +20,7 @@ namespace DataAccess.Concrete.EntitityFramework
         public DbSet<JobPosition> JobPositions { get; set; }
         public DbSet<JobSeeker> JobSeekers { get; set; }
         public DbSet<SystemStaff> SystemStaff { get; set; }
+        public DbSet<JobAdvertisement> JobAdvertisements { get; set; }
+        public DbSet<City> Cities { get; set; }
     }
 }
