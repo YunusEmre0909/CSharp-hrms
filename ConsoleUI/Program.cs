@@ -13,9 +13,20 @@ namespace ConsoleUI
 
             //JobPositionTest();
 
+            //CityTest();
+            JobAdvertisementManager jobAdvertisementManager = new JobAdvertisementManager(new EfJobAdvertisementDal());
+            foreach (var advert in jobAdvertisementManager.GetAllDetail())
+            {
+                Console.WriteLine(advert.JobAdvertisemetId+"/"+advert.JobPosition+"/"+advert.CompanyName+"/"+
+                    advert.NumberOfPosition+"/"+advert.ReleaseDate+"/"+advert.ApplicationDeadline);
+            }
+        }
+
+        private static void CityTest()
+        {
             CityManager cityManager = new CityManager(new EfCityDal());
 
-            cityManager.Add(new City {  CityName = "Adana" });
+            cityManager.Add(new City { CityName = "Adana" });
             foreach (var city in cityManager.GetAll())
             {
                 Console.WriteLine(city.CityName);
