@@ -5,6 +5,7 @@ using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfJobAdvertisementDal : EfEntityRepositoryBase<JobAdvertisement, HrmsContext>, IJobAdvertisementDal
     {
-        public List<JobAdvertisementDetailDto> GetAllDetail()
+        public List<JobAdvertisementDetailDto> GetAllDetail(Expression<Func<JobAdvertisementDetailDto,bool>>filter=null)
         {
             using (HrmsContext context = new HrmsContext())
             {
@@ -28,11 +29,12 @@ namespace DataAccess.Concrete.EntityFramework
                                  ReleaseDate = j.ReleaseDate,
                                  ApplicationDeadline = j.ApplicationDeadline
                              };
-                return result.ToList();
+                return filter is null? result.ToList() : result.Where(filter).ToList();
             }
 
         }
-            
+
+        
     }
 }
 
